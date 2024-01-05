@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    color: blanchedalmond;
+    margin: auto;
+    width: auto;
+}
+
+@media screen and (max-width:600px){
+    .App{
+        width: 500px;
+    }
+}
+

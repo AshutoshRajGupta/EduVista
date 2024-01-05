@@ -1,0 +1,87 @@
+nav{
+    background: rgba(0, 0, 0, 0.3);
+    width:max-content;
+    display:block;
+    position:fixed;
+    padding:0.5rem 1rem ;
+    z-index:2;
+    left: 50%;
+    transform: translateX(-50%);
+    /* bottom: 2rem; */
+    display: flex;
+    gap:0.8rem;
+    /* border-radius: 3rem; */
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 2px #a237db, 0 0 5px #a237db, 0 0 10px #a237db;
+}
+
+nav a{
+    background:transparent;
+    padding:0.5rem;
+    border-radius:40px;
+    display:flex;
+    color:var(--color-light);
+    font-size: 1.1rem;
+    color: white;
+
+}
+nav a:hover{
+    background: rgba(248, 242, 240, 0.4);
+    color: aqua;
+}
+
+nav:hover{
+
+}
+/* hello */
+
+#light {
+    background-color: #f3ebf6;
+  }
+  
+  #dark {
+    background-color: #46045e;
+  }
+
+  #light .main {
+    background-color: #fff;
+  }
+  
+  #dark .main {
+    background-color: #38004c;
+  }
+
+  #light .switch label {
+    color: black;
+  }
+  
+  #dark .switch label {
+    color: white;
+  }
+
+  .switch {
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    /* justify-content: center;
+    align-items: center; */
+  }
+  
+  .switch label {
+    margin: 10px;
+  }
+
+  .sign {
+    padding-top: 40px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+  }
+  
+  #light .sign {
+    color: #8c55aa;
+  }
+  
+  #dark .sign {
+    color: #ffffff;
+  }
