@@ -1,7 +1,9 @@
-*{
+/* Home.css */
+* {
     box-sizing: border-box;
 }
-.maindiv{
+
+.maindiv {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 13rem;
@@ -13,47 +15,64 @@
     align-items: auto;
 }
 
-.lotty_all{
-    height: 10.5rem;
-    width: 13rem;
+.lotty_all {
+    height: 45px;
+    width: 170px;
 }
 
-#Home{
+#Home {
     height: auto;
 }
 
-
-.rect1, .rect2, .rect3, .rect4, .rect5, .rect6, .rect7, .rect8, .rect9{
+.rect1,
+.rect2,
+.rect3,
+.rect4,
+.rect5,
+.rect6,
+.rect7,
+.rect8,
+.rect9 {
     /* border: 2px solid magenta; */
-    border:2px solid #31314b;
-    background-color: #020215;
+    /* border: 2px solid #9898bd; */
+    background-color: #ffffffdc;
     color: white;
-    height: 13.625rem;
+    height: 13.6rem;
+    backdrop-filter: blur(2px);
     /* border-radius: 2.188rem; */
-    /* box-shadow: 0 0 2px #a237db, 0 0 5px #a237db, 0 0 10px #a237db; */
+    /* box-shadow: 0 0 2px #e8e2eb, 0 0 5px #e3dbe7, 0 0 10px #ece5ef; */
 }
 
-.rect1 h4,.rect2 h4,.rect3 h4,.rect4 h4,.rect5 h4,.rect6 h4,.rect7 h4,.rect8 h4,.rect9 h4{
+.rect1 h4,
+.rect2 h4,
+.rect3 h4,
+.rect4 h4,
+.rect5 h4,
+.rect6 h4,
+.rect7 h4,
+.rect8 h4,
+.rect9 h4 {
     text-align: center;
     margin: auto;
+    color:black
 }
 
-.image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9{
+.lotty_all img {
     height: 11rem;
-    width: 13rem;
+    width: 11rem;
     justify-content: center;
+    
 }
 
-.i1{
+.i1 {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
 
-@media only screen and (max-width:550px) {
-    .maindiv{
+@media only screen and (max-width: 550px) {
+    .maindiv {
         grid-template-columns: 1fr;
         margin: auto;
     }
 }
-

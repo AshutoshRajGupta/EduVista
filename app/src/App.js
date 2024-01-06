@@ -1,51 +1,33 @@
-import "./App.css";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import About from "./Components/Aboutus/About";
-import Main from "./Components/main/Main";
 import Contact from "./Components/contactus/Contact";
 import Footer from "./Components/Footer/Footer";
 import Suggestion from "./Components/Suggestion/Suggestion";
 import Navbar from "./Components/Navbar/Navbar";
-import { useState, useEffect } from "react";
-import HashLoader from "react-spinners/HashLoader";
+import "./App.css";
 
 function App() {
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, []);
-  const style = {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+  const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    document.body.classList.toggle("dark-theme");
   };
 
   return (
     <div className="App">
-      {loading ? (
-        <HashLoader
-          color={"#FF00FF"}
-          loading={loading}
-          size={150}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-          style={style}
-          
-        />
-      ) : (
-        <>
-          <Navbar />
-          <Home />
-          <About />
-          <Suggestion />
-          <Contact />
-          <Footer />
-        </>
-      )}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home  theme={theme}/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/suggestion" element={<Suggestion />} />
+        </Routes>
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <Footer />
+      </Router>
     </div>
   );
 }

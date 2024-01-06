@@ -4,10 +4,10 @@
  }
 
 .about__text h2{
-    margin-top: 5rem;
-    text-align: left;
-    margin-left: 10rem;
-    font-size: 2rem;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 1rem;
+    font-size: 3rem;
 }
 
 
@@ -15,7 +15,7 @@
 .con{
     margin: auto;
     font-size: 1rem;
-    padding: 45px 35px 0px 55px;
+    padding: 0px 0px 0px 55px;
 }
 
 .hand{
@@ -103,7 +103,7 @@
 
 
 .about__text{
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .about__text p{

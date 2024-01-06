@@ -542,8 +542,8 @@ const Main = () => {
               scrolldelay="60"
             ></marquee>
             <div className="texts">
-              {/* <p>Suggestion</p> */}
-              <a href="#Suggestion"> Suggestion</a>
+              
+              <a href="/suggestion"> Suggestion</a>
             </div>
           </div>
         </div>

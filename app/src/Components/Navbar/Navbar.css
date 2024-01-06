@@ -1,87 +1,96 @@
-nav{
-    background: rgba(0, 0, 0, 0.3);
-    width:max-content;
-    display:block;
-    position:fixed;
-    padding:0.5rem 1rem ;
-    z-index:2;
-    left: 50%;
-    transform: translateX(-50%);
-    /* bottom: 2rem; */
+/* Navbar.css */
+#Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0px;
+  margin-top:0px;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(163, 92, 208, 0.5);
+  z-index: 1000;
+}
+
+/* .logo {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+} */
+
+.logo1 {
+  max-width: 55px; /* Set a maximum width for the logo */
+}
+
+.logo1 img {
+  width:50%; /* Make the image fill its container */
+  height: 50%; /* Maintain aspect ratio */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-buttons a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.nav-buttons a:hover {
+  background-color: #34495e;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger.active .hamburger-icon:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .hamburger-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-icon:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #ecf0f1;
+  margin-bottom: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-buttons {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #34495e;
+    box-shadow: 0px 4px 8px rgba(163, 92, 208, 0.5);
+    z-index: 999;
+  }
+
+  .nav-buttons.active {
     display: flex;
-    gap:0.8rem;
-    /* border-radius: 3rem; */
-    backdrop-filter: blur(4px);
-    box-shadow: 0 0 2px #a237db, 0 0 5px #a237db, 0 0 10px #a237db;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
-
-nav a{
-    background:transparent;
-    padding:0.5rem;
-    border-radius:40px;
-    display:flex;
-    color:var(--color-light);
-    font-size: 1.1rem;
-    color: white;
-
-}
-nav a:hover{
-    background: rgba(248, 242, 240, 0.4);
-    color: aqua;
-}
-
-nav:hover{
-
-}
-/* hello */
-
-#light {
-    background-color: #f3ebf6;
-  }
-  
-  #dark {
-    background-color: #46045e;
-  }
-
-  #light .main {
-    background-color: #fff;
-  }
-  
-  #dark .main {
-    background-color: #38004c;
-  }
-
-  #light .switch label {
-    color: black;
-  }
-  
-  #dark .switch label {
-    color: white;
-  }
-
-  .switch {
-    display: flex;
-    width: 100vw;
-    height: 100px;
-    /* justify-content: center;
-    align-items: center; */
-  }
-  
-  .switch label {
-    margin: 10px;
-  }
-
-  .sign {
-    padding-top: 40px;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: bold;
-    font-size: 23px;
-  }
-  
-  #light .sign {
-    color: #8c55aa;
-  }
-  
-  #dark .sign {
-    color: #ffffff;
-  }

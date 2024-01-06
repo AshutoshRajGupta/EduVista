@@ -4,6 +4,8 @@
 
 #yash_div {
   height: auto;
+  padding-top:4.5rem;
+
 }
 
 .maindiv_content {
@@ -12,7 +14,7 @@
   column-gap: 30px;
   row-gap: 30px;
   padding: 1.875rem;
-  height: 100vh;
+  height: 100rem;
 }
 
 .offi_websites,
@@ -22,11 +24,11 @@
 .Courses,
 .Suggestion_form {
   border: 2px solid #31314b;
-  /* box-shadow: 0 0 2px #a237db, 0 0 5px #a237db, 0 0 10px #a237db; */
-  background-color: #1A1A2A;
+  box-shadow: 0 0 2px #d498f4, 0 0 5px #82569a, 0 0 10px #dfbaf3;
+  background-color: #bbbbfa;
   color: white;
   /* border-radius: 2.188rem; */
-  height: 300px;
+  height: 100px;
 }
 
 .offi_websites h4,
@@ -46,7 +48,7 @@
   justify-content: center;
   border: 2px solid rgb(95, 136, 231);
   border-radius: 20px;
-  height: 85%;
+  height: 60%;
   width: 90%;
   margin: auto;
 }

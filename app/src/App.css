@@ -5,6 +5,20 @@ h1{
     width: auto;
 }
 
+/* App.css */
+/* App.css */
+/* App.css */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark-theme {
+    background-color: #100b39;
+    color: #ecf0f1;
+  }
+  
+
+
 @media screen and (max-width:600px){
     .App{
         width: 500px;

@@ -19,16 +19,7 @@ import CyberSecurity from "../CyberSecurity/CyberSecurity";
 import Graphics from "../GRAPHICS/Graphics";
 import { useState } from "react";
 import DSA from "../DSA/DSA";
-import Lottie from "lottie-react";
-import lot1 from "../../assets/lotties/frontend_lottie.json";
-import lot2 from "../../assets/lotties/backend_lottie.json";
-import lot3 from "../../assets/lotties/dsa_lottie.json";
-import lot4 from "../../assets/lotties/android_lottie.json";
-import lot5 from "../../assets/lotties/cloud_lottie.json";
-import lot6 from "../../assets/lotties/ai_lottie.json";
-import lot7 from "../../assets/lotties/ml_lottie.json";
-import lot8 from "../../assets/lotties/cyberSecurity_lottie.json";
-import lot9 from "../../assets/lotties/gd_lottie.json";
+
 
 const Home = () => {
   const components = [
@@ -53,7 +44,7 @@ const Home = () => {
             <div className="i1">
               <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(0)}>
-                <Lottie animationData={lot1}/>
+                <img src={img1} alt="images"/>
                 </div>
               </a>
             </div>
@@ -63,7 +54,7 @@ const Home = () => {
             <div className="i1">
             <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(1)}>
-                <Lottie animationData={lot2}/>
+                <img src={img2} alt="images"/>
                 </div>
               </a>
             </div>
@@ -73,7 +64,7 @@ const Home = () => {
             <div className="i1">
             <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(2)}>
-                <Lottie animationData={lot3}/>
+                <img src={img3} alt="images"/>
                 </div>
               </a>
             </div>
@@ -83,7 +74,7 @@ const Home = () => {
             <div className="i1">
             <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(3)}>
-                <Lottie animationData={lot4}/>
+                <img src={img4} alt="images"/>
                 </div>
               </a>
             </div>
@@ -93,7 +84,7 @@ const Home = () => {
             <div className="i1">
             <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(4)}>
-                <Lottie animationData={lot5}/>
+                <img src={img5} alt="images"/>
                 </div>
               </a>
             </div>
@@ -103,7 +94,7 @@ const Home = () => {
             <div className="i1">
             <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(5)}>
-                <Lottie animationData={lot6}/>
+                <img src={img6} alt='images'/>
                 </div>
               </a>
             </div>
@@ -113,7 +104,7 @@ const Home = () => {
             <div className="i1">
             <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(6)}>
-                <Lottie animationData={lot7}/>
+                <img src={img7} alt='images'/>
                 </div>
               </a>
             </div>
@@ -123,7 +114,7 @@ const Home = () => {
             <div className="i1">
             <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(7)}>
-                <Lottie animationData={lot8}/>
+                <img src={img8} alt='images'/>
                 </div>
               </a>
             </div>
@@ -133,7 +124,7 @@ const Home = () => {
             <div className="i1">
             <a href="#Main">
                 <div className="lotty_all" onClick={() => setIndex(8)}>
-                <Lottie animationData={lot9}/>
+                <img src={img9} alt='images'/>
                 </div>
               </a>
             </div>

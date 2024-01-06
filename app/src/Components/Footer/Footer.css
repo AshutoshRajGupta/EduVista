@@ -1,97 +1,75 @@
-footer{
-    /* background: var(--color-primary); */
-   background-color: white;
-    padding: 2rem 0;
+
+
+/* Footer.css (Create a new CSS file, e.g., Footer.css) */
+.footer {
+    background-color: #393E46;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    max-width: 100px; /* Set a maximum width for the logo */
+  }
+  
+  .logo img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .description {
+    color: #8C8C8C;
+    text-align: justify;
+    width: 33%; /* Set a fixed width */
+  }
+  
+ /* Updated CSS with brighter colors */
+
+.social-media-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .social-media-icons a {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #ff6699; /* Bright pink color */
+    transition: color 0.3s ease; /* Smooth transition on color change */
+  }
+  
+  .social-media-icons a:hover {
+    color: #ff3366; /* Hover color */
+  }
+  
+  .navigation-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navigation-links a {
+    color: #ff6699; /* Bright pink color */
+  }
+  
+  .copyrit {
     text-align: center;
-    font-size: 0.9rem;
-    margin-top: 4rem;
-    padding-bottom: 2rem;
-    
-
-}
-
-#foot{
-    margin-top: 200px;
-}
-
-.logo_div{
-    margin: auto;
-}
-
-.logo_img{
-    height: 150px;
-    width: 230px;
-}
-
-footer a{
-    color: var(--color-bg);
-}
-
-.footer__logo{
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    display: inline-block;
-}
-
-.permalinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-    margin: 0 auto 2rem;
-
-}
-
-.permalinks a{
-    font-size: 20px;
-    color: rgb(161, 33, 170);
-}
-
-.footer__socials{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer__socials a{
-    background:var(--color-bg);
-    color: var(--color-white);
-    padding: 0.8rem;
-    border-radius: 1rem;
-    display: flex;
-    border: 1px solid transparent;
-}
-
-.footer__socials a:hover{
-    background: transparent;
-    color: var(--color-bg);
-    border-color: var(--color-bg);
-}
-
-.footer__copyright{
-    margin-bottom: 1rem;
-    /* color: var(--color-bg); */
-    color: rgb(161, 33, 170);
-}
-
-.footer__copyright small{
-    text-decoration:double;
-    font-size: 25px;
-}
-
-
-@media screen and (max-width:600px){
-    .permalinks{
-        flex-direction: column;
-        gap: 1.5rem;
+    text-shadow: 1px 1px 2px #ff6699; /* Add a subtle text shadow with bright pink color */
+    animation: colorChange 3s infinite alternate; /* Animation for color change */
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #ff6699; /* Bright pink color */
     }
-
-    .footer__socials{
-        margin-bottom: 2.5rem;
+    100% {
+      color: #ff3366; /* Slightly darker pink color */
     }
-    #foot{
-        width: 500px;
-    }
-}
+  }
+  
+  /* Add any additional styling for the copyright text if needed */
+  
