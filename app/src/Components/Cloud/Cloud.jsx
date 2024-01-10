@@ -1,5 +1,5 @@
-import React from 'react'
-import  { useRef, useState } from "react";
+import React from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import sampleimg from "../../assets/suggestion.png";
@@ -21,50 +21,52 @@ import Lottie from "lottie-react";
 import cs1 from "../../assets/lotties/coming_soon.json";
 import Modal from "react-modal";
 
-
 const Cloud = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
     // <di className='outerContainer'>
-      <section id="Main">
-      <div className="maindiv_content" id='yash_div'>
+    <section id="Main">
+      <div className="maindiv_content" id="yash_div">
         <div className="offi_websites">
           <h4>Official websites</h4>
           <div className="marquee_div" id="link_con">
-          <div className="all_links">
-            <marquee
-              id="rightContainer_ContentTable2_panel3"
-              align="justify"
-              direction="up"
-              onMouseOut="this.start()"
-              height="165px"
-              onMouseOver="this.stop()"
-              scrollamount="3"
-              scrolldelay="60"
-            >
-              <div className="site1">
-                <p align="justify">
-                  <a href="https://cloud.google.com/" target="_blank">
-                    Google Cloud
-                  </a>
-                </p>
-              </div>
-              <div className="site1">
-                <p align="justify">
-                  <a href="https://aws.amazon.com/" target="_blank">
-                    Amazon Web Services
-                  </a>
-                </p>
-              </div>
-              <div className="site1">
-                <p align="justify">
-                  <a href="https://azure.microsoft.com/en-in/ " target="_blank">
-                    Microsoft Azure
-                  </a>
-                </p>
-              </div>
-            </marquee>
+            <div className="all_links">
+              <marquee
+                id="rightContainer_ContentTable2_panel3"
+                align="justify"
+                direction="up"
+                onMouseOut="this.start()"
+                height="165px"
+                onMouseOver="this.stop()"
+                scrollamount="3"
+                scrolldelay="60"
+              >
+                <div className="site1">
+                  <p align="justify">
+                    <a href="https://cloud.google.com/" target="_blank">
+                      Google Cloud
+                    </a>
+                  </p>
+                </div>
+                <div className="site1">
+                  <p align="justify">
+                    <a href="https://aws.amazon.com/" target="_blank">
+                      Amazon Web Services
+                    </a>
+                  </p>
+                </div>
+                <div className="site1">
+                  <p align="justify">
+                    <a
+                      href="https://azure.microsoft.com/en-in/ "
+                      target="_blank"
+                    >
+                      Microsoft Azure
+                    </a>
+                  </p>
+                </div>
+              </marquee>
             </div>
 
             <div className="modal_button">
@@ -85,26 +87,29 @@ const Cloud = () => {
                 }}
               >
                 <div className="site1">
-                <p align="justify">
-                  <a href="https://cloud.google.com/" target="_blank">
-                    Google Cloud
-                  </a>
-                </p>
-              </div>
-              <div className="site1">
-                <p align="justify">
-                  <a href="https://aws.amazon.com/" target="_blank">
-                    Amazon Web Services
-                  </a>
-                </p>
-              </div>
-              <div className="site1">
-                <p align="justify">
-                  <a href="https://azure.microsoft.com/en-in/ " target="_blank">
-                    Microsoft Azure
-                  </a>
-                </p>
-              </div>
+                  <p align="justify">
+                    <a href="https://cloud.google.com/" target="_blank">
+                      Google Cloud
+                    </a>
+                  </p>
+                </div>
+                <div className="site1">
+                  <p align="justify">
+                    <a href="https://aws.amazon.com/" target="_blank">
+                      Amazon Web Services
+                    </a>
+                  </p>
+                </div>
+                <div className="site1">
+                  <p align="justify">
+                    <a
+                      href="https://azure.microsoft.com/en-in/ "
+                      target="_blank"
+                    >
+                      Microsoft Azure
+                    </a>
+                  </p>
+                </div>
                 <div>
                   <button
                     id="close_btn"
@@ -281,18 +286,22 @@ const Cloud = () => {
         </div>
         <div className="Projects">
           <h4>Projects</h4>
-          <div className="project_con">
-          <Lottie animationData={cs1}/>
-          {/* <div className="level3">
-              <h4>Advanced</h4>
+          <div className="suggest_con">
+              <marquee
+                id="rightContainer_ContentTable2_panel3"
+                align="justify"
+                direction="up"
+                onmouseout="this.start()"
+                height="200px"
+                onmouseover="this.stop()"
+                scrollamount="3"
+                scrolldelay="60"
+              ></marquee>
+              <div className="texts">
+                {/* <p>Suggestion</p> */}
+                <a href="https://docs.google.com/document/d/1MLEBBhgNySwmN_R4yMgwGE9_xCW4_sYUlO8KAvuZCrE/edit?usp=sharing" target="_blank"> Project Ideas</a>
+              </div>
             </div>
-            <div className="level2">
-              <h4>Intermediate</h4>
-            </div>
-            <div className="level1">
-              <h4>Basic</h4>
-            </div> */}
-          </div>
         </div>
         <div className="Roadmap">
           <h4>Roadmap</h4>
@@ -376,7 +385,10 @@ const Cloud = () => {
               </SwiperSlide>
               <SwiperSlide>
                 {" "}
-                <a href="https://www.udemy.com/course/introduction-to-cloud-computing-with-amazon-web-services/" target="blank">
+                <a
+                  href="https://www.udemy.com/course/introduction-to-cloud-computing-with-amazon-web-services/"
+                  target="blank"
+                >
                   <img className="im1" src={ct2} />
                 </a>
               </SwiperSlide>
@@ -391,13 +403,19 @@ const Cloud = () => {
               </SwiperSlide>
               <SwiperSlide>
                 {" "}
-                <a href="https://in.coursera.org/specializations/microsoft-azure-fundamentals-az-900?utm_source=gg&utm_medium=sem&utm_campaign=B2C_INDIA_google-it-support_FTCOF_professional-certificates_PMax-arte-NRL_greater_than_14D&utm_content=B2C&campaignid=18968559034&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&adpostion=&creativeid=&hide_mobile_promo" target="blank">
+                <a
+                  href="https://in.coursera.org/specializations/microsoft-azure-fundamentals-az-900?utm_source=gg&utm_medium=sem&utm_campaign=B2C_INDIA_google-it-support_FTCOF_professional-certificates_PMax-arte-NRL_greater_than_14D&utm_content=B2C&campaignid=18968559034&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&adpostion=&creativeid=&hide_mobile_promo"
+                  target="blank"
+                >
                   <img className="im1" src={ct4} />
                 </a>
               </SwiperSlide>
               <SwiperSlide>
                 {" "}
-                <a href="https://www.pluralsight.com/courses/cloud-computing-big-picture" target="blank">
+                <a
+                  href="https://www.pluralsight.com/courses/cloud-computing-big-picture"
+                  target="blank"
+                >
                   <img className="im1" src={ct5} />
                 </a>
               </SwiperSlide>
@@ -421,14 +439,14 @@ const Cloud = () => {
             ></marquee>
             <div className="texts">
               {/* <p>Suggestion</p> */}
-              <a href='#Suggestion'> Suggestion</a>
+              <a href="#Suggestion"> Suggestion</a>
             </div>
           </div>
         </div>
       </div>
     </section>
     // </div>
-  )
-}
+  );
+};
 
-export default Cloud
+export default Cloud;

@@ -415,18 +415,22 @@ const Main = () => {
         </div>
         <div className="Projects">
           <h4>Projects</h4>
-          <div className="project_con">
-            <Lottie animationData={cs1} />
-            {/* <div className="level3">
-              <h4>Advanced</h4>
+          <div className="suggest_con">
+              <marquee
+                id="rightContainer_ContentTable2_panel3"
+                align="justify"
+                direction="up"
+                onmouseout="this.start()"
+                height="200px"
+                onmouseover="this.stop()"
+                scrollamount="3"
+                scrolldelay="60"
+              ></marquee>
+              <div className="texts">
+                {/* <p>Suggestion</p> */}
+                <a href="https://docs.google.com/document/d/1yDU28DEaAd5r-2C-07T4KXY7gs0JPV8qJ2Xvfr_g1N4/edit?usp=sharing" target="_blank"> Project Ideas</a>
+              </div>
             </div>
-            <div className="level2">
-              <h4>Intermediate</h4>
-            </div>
-            <div className="level1">
-              <h4>Basic</h4>
-            </div> */}
-          </div>
         </div>
         <div className="Roadmap">
           <h4>Roadmap</h4>

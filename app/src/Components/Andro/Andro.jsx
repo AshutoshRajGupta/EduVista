@@ -1,5 +1,5 @@
 import React from "react";
-import  { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import sampleimg from "../../assets/suggestion.png";
@@ -24,96 +24,108 @@ const Andro = () => {
           <div className="offi_websites">
             <h4>Official websites</h4>
             <div className="marquee_div" id="link_con">
-            <div className="all_links">
-              <marquee
-                id="rightContainer_ContentTable2_panel3"
-                align="justify"
-                direction="up"
-                onmouseout="this.start()"
-                height="165px"
-                onmouseover="this.stop()"
-                scrollamount="3"
-                scrolldelay="60"
-              >
-                <div className="site1">
-                  <p align="justify">
-                    <a href="https://developer.android.com/docs" target="blank">
-                      Android Developer Documentation
-                    </a>
-                  </p>
-                </div>
-                <div className="site1">
-                  <p align="justify">
-                    <a href="https://developer.android.com/" target="blank">
-                      Android Developer official
-                    </a>
-                  </p>
-                </div>
-                <div className="site1">
-                  <p align="justify">
-                    <a href="https://developer.android.com/courses/android-basics-kotlin/course" target="blank">
-                      Android Kotlin basics
-                    </a>
-                  </p>
-                </div>
-              </marquee>
+              <div className="all_links">
+                <marquee
+                  id="rightContainer_ContentTable2_panel3"
+                  align="justify"
+                  direction="up"
+                  onmouseout="this.start()"
+                  height="165px"
+                  onmouseover="this.stop()"
+                  scrollamount="3"
+                  scrolldelay="60"
+                >
+                  <div className="site1">
+                    <p align="justify">
+                      <a
+                        href="https://developer.android.com/docs"
+                        target="blank"
+                      >
+                        Android Developer Documentation
+                      </a>
+                    </p>
+                  </div>
+                  <div className="site1">
+                    <p align="justify">
+                      <a href="https://developer.android.com/" target="blank">
+                        Android Developer official
+                      </a>
+                    </p>
+                  </div>
+                  <div className="site1">
+                    <p align="justify">
+                      <a
+                        href="https://developer.android.com/courses/android-basics-kotlin/course"
+                        target="blank"
+                      >
+                        Android Kotlin basics
+                      </a>
+                    </p>
+                  </div>
+                </marquee>
               </div>
 
               <div className="modal_button">
-              <button onClick={() => setModalIsOpen(true)}>Click Here</button>
-              <Modal
-                isOpen={modalIsOpen}
-                shouldCloseOnOverlayClick={false}
-                onRequestClose={() => setModalIsOpen(false)}
-                style={{
-                  overlay: {
-                    backgroundColor: "#3c3c74",
-                    zIndex: 100,
-                  },
-                  content: {
-                    zIndex: 100,
-                    backgroundColor: "#313150",
-                  },
-                }}
-              >
-              <div className="site1">
-                  <p align="justify">
-                    <a href="https://developer.android.com/docs" target="blank">
-                      Android Developer Documentation
-                    </a>
-                  </p>
-                </div>
-                <div className="site1">
-                  <p align="justify">
-                    <a href="https://developer.android.com/" target="blank">
-                      Android Developer official
-                    </a>
-                  </p>
-                </div>
-                <div className="site1">
-                  <p align="justify">
-                    <a href="https://developer.android.com/courses/android-basics-kotlin/course" target="blank">
-                      Android Kotlin basics
-                    </a>
-                  </p>
-                </div>
-                
-                <div>
-                  <button
-                    id="close_btn"
-                    onClick={() => setModalIsOpen(false)}
-                    style={{
-                      backgroundColor: "red",
-                      height: "30px",
-                      width: "60px",
-                      color: "white",
-                    }}
-                  >
-                    Close
-                  </button>
-                </div>
-              </Modal>
-            </div>
+                <button onClick={() => setModalIsOpen(true)}>Click Here</button>
+                <Modal
+                  isOpen={modalIsOpen}
+                  shouldCloseOnOverlayClick={false}
+                  onRequestClose={() => setModalIsOpen(false)}
+                  style={{
+                    overlay: {
+                      backgroundColor: "#3c3c74",
+                      zIndex: 100,
+                    },
+                    content: {
+                      zIndex: 100,
+                      backgroundColor: "#313150",
+                    },
+                  }}
+                >
+                  <div className="site1">
+                    <p align="justify">
+                      <a
+                        href="https://developer.android.com/docs"
+                        target="blank"
+                      >
+                        Android Developer Documentation
+                      </a>
+                    </p>
+                  </div>
+                  <div className="site1">
+                    <p align="justify">
+                      <a href="https://developer.android.com/" target="blank">
+                        Android Developer official
+                      </a>
+                    </p>
+                  </div>
+                  <div className="site1">
+                    <p align="justify">
+                      <a
+                        href="https://developer.android.com/courses/android-basics-kotlin/course"
+                        target="blank"
+                      >
+                        Android Kotlin basics
+                      </a>
+                    </p>
+                  </div>
+
+                  <div>
+                    <button
+                      id="close_btn"
+                      onClick={() => setModalIsOpen(false)}
+                      style={{
+                        backgroundColor: "red",
+                        height: "30px",
+                        width: "60px",
+                        color: "white",
+                      }}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </Modal>
+              </div>
             </div>
           </div>
           <div className="yt_videos">
@@ -162,76 +174,79 @@ const Andro = () => {
                 </div>
               </marquee> */}
               <Swiper
-              spaceBetween={30}
-              centeredSlides={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                {" "}
-                <a
-                  href="https://www.youtube.com/@PhilippLackner/playlists"
-                  target="blank"
-                >
-                  <img className="im1" src={yand1} />
-                </a>
-              </SwiperSlide>
-              <SwiperSlide>
-                <p align="justify">
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  {" "}
                   <a
-                    href="https://youtube.com/watch?v=mXjZQX3UzOs"
+                    href="https://www.youtube.com/@PhilippLackner/playlists"
                     target="blank"
                   >
-                    <img className="im1" src={yand2} />
+                    <img className="im1" src={yand1} />
                   </a>
-                </p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <p align="justify">
-                  <a
-                    href="https://www.youtube.com/@StevdzaSan"
-                    target="blank"
-                  >
-                    <img className="im1" src={yand3} />
-                  </a>
-                </p>
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <p align="justify">
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLUhfM8afLE_Ok-0Lx2v9hfrmbxi3GgsX1"
-                    target="blank"
-                  >
-                    <img className="im1" src={yand4} />
-                  </a>
-                </p>
-              </SwiperSlide>
-              
-            </Swiper>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <p align="justify">
+                    <a
+                      href="https://youtube.com/watch?v=mXjZQX3UzOs"
+                      target="blank"
+                    >
+                      <img className="im1" src={yand2} />
+                    </a>
+                  </p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <p align="justify">
+                    <a
+                      href="https://www.youtube.com/@StevdzaSan"
+                      target="blank"
+                    >
+                      <img className="im1" src={yand3} />
+                    </a>
+                  </p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  {" "}
+                  <p align="justify">
+                    <a
+                      href="https://www.youtube.com/playlist?list=PLUhfM8afLE_Ok-0Lx2v9hfrmbxi3GgsX1"
+                      target="blank"
+                    >
+                      <img className="im1" src={yand4} />
+                    </a>
+                  </p>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
           <div className="Projects">
             <h4>Projects</h4>
-            <div className="project_con">
-            <Lottie animationData={cs1}/>
-            {/* <div className="level3">
-              <h4>Advanced</h4>
-            </div>
-            <div className="level2">
-              <h4>Intermediate</h4>
-            </div>
-            <div className="level1">
-              <h4>Basic</h4>
-            </div> */}
+            <div className="suggest_con">
+              <marquee
+                id="rightContainer_ContentTable2_panel3"
+                align="justify"
+                direction="up"
+                onmouseout="this.start()"
+                height="200px"
+                onmouseover="this.stop()"
+                scrollamount="3"
+                scrolldelay="60"
+              ></marquee>
+              <div className="texts">
+                {/* <p>Suggestion</p> */}
+                <a href="https://docs.google.com/document/d/1nOJNlx5Wcc4iX7Qdx-mgsxKck2BMO_G5s0US0MHhT00/edit?usp=sharing" target="_blank"> Project Ideas</a>
+              </div>
             </div>
           </div>
           <div className="Roadmap">
@@ -241,7 +256,9 @@ const Andro = () => {
                 <img src={road_im}></img>
               </div>
               <div className="button">
-                <a href="https://roadmap.sh/android" target="_blank">Get the road map</a>
+                <a href="https://roadmap.sh/android" target="_blank">
+                  Get the road map
+                </a>
               </div>
             </div>
           </div>
@@ -266,30 +283,29 @@ const Andro = () => {
                 </div>
               </marquee> */}
               <Swiper
-              spaceBetween={30}
-              centeredSlides={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                {" "}
-                <a
-                  href="https://www.udemy.com/course/android-kotlin-developer/"
-                  target="blank"
-                >
-                  <img className="im1" src={cand1} />
-                </a>
-              </SwiperSlide>
-              
-            </Swiper>
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  {" "}
+                  <a
+                    href="https://www.udemy.com/course/android-kotlin-developer/"
+                    target="blank"
+                  >
+                    <img className="im1" src={cand1} />
+                  </a>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
 
