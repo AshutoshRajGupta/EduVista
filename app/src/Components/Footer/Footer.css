@@ -1,75 +1,91 @@
-
-
 /* Footer.css (Create a new CSS file, e.g., Footer.css) */
 .footer {
-    background-color: #393E46;
-    color: white;
-    padding: 2rem;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    max-width: 100px; /* Set a maximum width for the logo */
-  }
-  
-  .logo img {
-    width: 100%; /* Make the image fill its container */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .description {
-    color: #8C8C8C;
-    text-align: justify;
-    width: 33%; /* Set a fixed width */
-  }
-  
- /* Updated CSS with brighter colors */
+  background-color: #393E46;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Change to column layout on small screens */
+  align-items: center;
+}
+
+.logo {
+  max-width: 100px; /* Set a maximum width for the logo */
+  margin-bottom: 1rem; /* Add some space between the logo and other elements */
+}
+
+.logo img {
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.description {
+  color: #8C8C8C;
+  text-align: justify;
+  width: 100%; /* Full width on small screens */
+  margin-bottom: 1rem; /* Add some space between the description and other elements */
+}
 
 .social-media-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .social-media-icons a {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-    color: #ff6699; /* Bright pink color */
-    transition: color 0.3s ease; /* Smooth transition on color change */
-  }
-  
-  .social-media-icons a:hover {
-    color: #ff3366; /* Hover color */
-  }
-  
-  .navigation-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navigation-links a {
-    color: #ff6699; /* Bright pink color */
-  }
-  
-  .copyrit {
-    text-align: center;
-    text-shadow: 1px 1px 2px #ff6699; /* Add a subtle text shadow with bright pink color */
-    animation: colorChange 3s infinite alternate; /* Animation for color change */
-  }
-  
-  @keyframes colorChange {
-    0% {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem; /* Add some space between the icons and other elements */
+}
+
+.social-media-icons a {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #ff6699; /* Bright pink color */
+  transition: color 0.3s ease; /* Smooth transition on color change */
+}
+
+.social-media-icons a:hover {
+  color: #ff3366; /* Hover color */
+}
+
+.navigation-links {
+  display: flex;
+  flex-direction: column; /* Change to column layout on small screens */
+  gap: 1rem;
+}
+
+.navigation-links a {
+  color: #ff6699; /* Bright pink color */
+}
+
+.copyrit {
+  text-align: center;
+  text-shadow: 1px 1px 2px #ff6699; /* Add a subtle text shadow with bright pink color */
+  animation: colorChange 3s infinite alternate; /* Animation for color change */
+  margin-top: 1rem; /* Add some space between the copyright text and other elements */
+}
+
+@keyframes colorChange {
+  0% {
       color: #ff6699; /* Bright pink color */
-    }
-    100% {
-      color: #ff3366; /* Slightly darker pink color */
-    }
   }
-  
-  /* Add any additional styling for the copyright text if needed */
-  
+  100% {
+      color: #ff3366; /* Slightly darker pink color */
+  }
+}
+
+/* Add any additional styling for the copyright text if needed */
+
+@media screen and (min-width: 768px) {
+  /* Apply styles only for screens with a minimum width of 768px (small tablets and larger) */
+  .footer-container {
+      flex-direction: row; /* Revert to row layout on larger screens */
+      justify-content: space-between;
+  }
+
+  .description {
+      width: 33%; /* Set a fixed width */
+  }
+
+  .navigation-links {
+      flex-direction: row; /* Revert to row layout on larger screens */
+  }
+}

@@ -1,83 +1,178 @@
-import React from "react";
-import "./Contact.css";
+import React, { useState } from "react";
+import validator from "validator";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import './Contact.css';
+import {
+  faTwitter,
+  faInstagram,
+  faFacebook,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+library.add(fas, faInstagram, faFacebook, faTwitter, faLinkedin);
 
-import { BsMailbox } from "react-icons/bs";
-import { FcIdea } from "react-icons/fc";
-import { FaWhatsappSquare } from "react-icons/fa";
+export default function Contact() {
+  const [user, setUser] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    phone: "",
+    issueMsg: "",
+  });
 
-import { useRef } from "react";
-import emailjs from "emailjs-com";
+  const [formStatus, setFormStatus] = useState({
+    success: false,
+    error: false,
+  });
 
-const Contact = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      "service_xo5coum",
-      "template_v9czkup",
-      form.current,
-      "RN9xZpvtOlTv2jnjB"
-    );
-
-    e.target.reset();
+  const handleInputs = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setUser({ ...user, [name]: value });
   };
+
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      const { fname, lname, email, phone, issueMsg } = user;
+
+      const targetURL = "https://formspree.io/f/xyyryjqq"; // Replace with your Formspree endpoint
+
+      if (!validator.isEmail(email)) {
+        setFormStatus({ success: false, error: true });
+        return;
+      }
+
+      const res = await fetch(targetURL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fname,
+          lname,
+          email,
+          phone,
+          issueMsg,
+        }),
+      });
+
+      if (res.ok) {
+        setFormStatus({ success: true, error: false });
+
+        // Reset the input fields after successful submission
+        setUser({
+          fname: "",
+          lname: "",
+          email: "",
+          phone: "",
+          issueMsg: "",
+        });
+      } else {
+        setFormStatus({ success: false, error: true });
+      }
+    } catch (error) {
+      console.log(error);
+      setFormStatus({ success: false, error: true });
+    }
+  };
+
   return (
-    <section id="contact">
-      <div className="container contact__container">
-        <div className="contact__options">
-          <h2>Contact us</h2>
-
-          <article className="contact__option">
-            <BsMailbox />
-            <h4>Email</h4>
-            <h4>map2proCoder@gmail.com</h4>
-            <a href="mailto:map2procoder@gmail.com">Send a message</a>
-          </article>
-          <article className="contact__option">
-            <FcIdea />
-            <h4>Idea/Suggestion</h4>
-            <a href="#Suggestion"> Send message</a>
-          </article>
-          <article className="contact__option">
-            <FaWhatsappSquare />
-            <h4>WhatsApp</h4>
-            <h4>+91-9028405992</h4>
-            <a
-              href="https://api.whatsapp.com/send?phone=9028405992"
-              target="_blank"
+    <div>
+      <div className="contact-main-cont">
+        <div className="contact-text-cont">
+          <div className="contact-head-cont">
+            <h3 className="contact-head">GET IN TOUCH</h3>
+            <p className="contact-text">Feel free to contact us</p>
+          </div>
+          <div className="row">
+            <div className="contact-input-cont">
+              <input
+                style={{ width: "100%" }}
+                type="text"
+                className="contact-input"
+                onChange={handleInputs}
+                value={user.fname}
+                name="fname"
+                placeholder="First Name"
+                required={true}
+              />
+            </div>
+            <div className="contact-input-cont">
+              <input
+                style={{ width: "100%" }}
+                type="text"
+                className="contact-input"
+                onChange={handleInputs}
+                value={user.lname}
+                name="lname"
+                placeholder="Last Name"
+                required={true}
+              />
+            </div>
+            <div className="contact-input-cont">
+              <input
+                style={{ width: "100%" }}
+                type="email"
+                className="contact-input"
+                onChange={handleInputs}
+                value={user.email}
+                name="email"
+                placeholder="Email"
+                required={true}
+              />
+            </div>
+            <div className="contact-input-cont">
+              <input
+                style={{ width: "100%" }}
+                type="phone"
+                className="contact-input"
+                onChange={handleInputs}
+                value={user.phone}
+                name="phone"
+                placeholder="Phone"
+                required={true}
+              />
+            </div>
+            <div className="contact-input-cont">
+              <textarea
+                style={{ width: "100%" }}
+                rows="4"
+                cols="50"
+                className="contact-input"
+                onChange={handleInputs}
+                value={user.issueMsg}
+                name="issueMsg"
+                placeholder="Describe your Issue"
+              />
+            </div>
+          </div>
+          <div className="contact-btn-cont">
+            <button
+              type="submit"
+              onClick={handleSubmit}
+              className="contact-btn"
             >
-              Send a message
-            </a>
-          </article>
+              SEND
+            </button>
+          </div>
+          {formStatus.success && (
+            <p className="success-message">Form Submitted successfully!</p>
+          )}
+          {formStatus.error && (
+            <p className="error-message">
+              Error submitting the form. Please try again.
+            </p>
+          )}
         </div>
-        <form ref={form} onSubmit={sendEmail}>
-          <input
-            type="text"
-            name="name"
-            placeholder="your full name"
-            required
-          ></input>
-          <input
-            type="text"
-            name="email"
-            placeholder="your email"
-            required
-          ></input>
-          <textarea
-            name="message"
-            rows="7"
-            placeholder="your message"
-            required
-          ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Send message
-          </button>
-        </form>
       </div>
-    </section>
+      <div className="icons-co">
+        <FontAwesomeIcon className="con-icon" icon={faInstagram} />
+        <FontAwesomeIcon className="con-icon" icon={faFacebook} />
+        <FontAwesomeIcon className="con-icon" icon={faTwitter} />
+        <FontAwesomeIcon className="con-icon" icon={faLinkedin} />
+      </div>
+    </div>
   );
-};
-
-export default Contact;
+}
