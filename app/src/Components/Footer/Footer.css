@@ -17,8 +17,9 @@
 }
 
 .logo img {
-  width: 100%; /* Make the image fill its container */
-  height: auto; /* Maintain aspect ratio */
+  width: 200px; /* Make the image fill its container */
+  height: 200px; /* Maintain aspect ratio */
+  border-radius: 50%;
 }
 
 .description {

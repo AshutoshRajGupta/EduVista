@@ -14,13 +14,14 @@ h2{
 .container.suggestion__container{
     width: 58%;
     display: grid;
-    grid-template-columns: 30% 58%;
+    grid-template-columns: 30% 68%;
     gap :34%;
+    margin-bottom:20px;
 }
 
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
+    color: rgb(64, 58, 58);
     opacity: 1; /* Firefox */
   }
 
@@ -41,9 +42,10 @@ h2{
 }
 
 .suggestion__option h3{
-    font-size: 1.4rem;
+    font-size: 2rem;
     margin-top: 20px;
     margin-bottom: 3rem;
+    color:rgb(139, 125, 125)
 }
 
 
@@ -80,19 +82,23 @@ input,textarea{
     padding: 0.5rem;
     border-radius: 0.5rem;
     background: transparent;
-    border: 2px solid var(--color-primary-variant);
+    border: 2px solid rgb(155, 150, 150);
     resize: none;
-    color: rgb(230, 238, 247);
+    color: rgb(130, 123, 123);
 }
 
+label{
+    color:rgb(130, 123, 123);
+    font-size: 1.4rem;
+}
 select{
     width: 100%;
     padding: 0.7rem;
     border-radius: 0.5rem;
     background: transparent;
-    border: 2px solid var(--color-primary-variant);
+    border: 2px solid rgb(155, 150, 150);
     resize: none;
-    color: rgb(168, 170, 172);
+    color: rgb(135, 140, 145);
 }
 .btn{
     width:max-content;
@@ -102,16 +108,12 @@ select{
     padding:0.75rem 1rem;
     border-radius: 0.4rem;
     cursor:pointer;
+    margin-right:20px;
     border:1px solid var(--color-primary);
     transition: var(--transition);
   }
   
-  .btn:hover{
-    background: var(--color-white);
-    color:var(--color-bg);
-    border-color: transparent;
   
-  }
   
   .btn-primary{
     

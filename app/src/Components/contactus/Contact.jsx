@@ -37,7 +37,7 @@ export default function Contact() {
       e.preventDefault();
       const { fname, lname, email, phone, issueMsg } = user;
 
-      const targetURL = "https://formspree.io/f/xyyryjqq"; // Replace with your Formspree endpoint
+      const targetURL = "https://formspree.io/f/myyrzkzp"; // Replace with your Formspree endpoint
 
       if (!validator.isEmail(email)) {
         setFormStatus({ success: false, error: true });
@@ -167,12 +167,7 @@ export default function Contact() {
           )}
         </div>
       </div>
-      <div className="icons-co">
-        <FontAwesomeIcon className="con-icon" icon={faInstagram} />
-        <FontAwesomeIcon className="con-icon" icon={faFacebook} />
-        <FontAwesomeIcon className="con-icon" icon={faTwitter} />
-        <FontAwesomeIcon className="con-icon" icon={faLinkedin} />
-      </div>
+      
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo1 from "../../assets/Images/android.png";
+import logo1 from "../../assets/Images/logo2.png";
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [showMenu, setShowMenu] = useState(false);

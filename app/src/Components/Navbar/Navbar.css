@@ -22,12 +22,14 @@
 } */
 
 .logo1 {
-  max-width: 55px; /* Set a maximum width for the logo */
+  max-width: 150px; /* Set a maximum width for the logo */
+  height:70px;
 }
 
 .logo1 img {
-  width:50%; /* Make the image fill its container */
-  height: 50%; /* Maintain aspect ratio */
+  /* width:100px; 
+  height: 400px;  */
+  margin-left:0px;
 }
 
 .nav-buttons {
