@@ -10,6 +10,21 @@ EduVista is an innovative online learning platform designed to provide a seamles
 
 - **Why Choose Us?**: Discover the simplicity and efficiency of our platform, empowering users through cutting-edge technology and user-friendly interfaces.
 
+- **Screenshots of website**:
+- ![image](https://github.com/AshutoshRajGupta/EduVista/assets/89141709/cd447af7-7634-4065-837b-54207807e222)
+- 
+- ![image](https://github.com/AshutoshRajGupta/EduVista/assets/89141709/f2fa774a-8bad-4b50-b51a-9814b24f7efd)
+- 
+- ![image](https://github.com/AshutoshRajGupta/EduVista/assets/89141709/b112983b-7a75-45da-b23b-74992419c739)
+- 
+- ![image](https://github.com/AshutoshRajGupta/EduVista/assets/89141709/73f0dcd9-5417-41b9-bf15-4dce6c41d349)
+- 
+- ![image](https://github.com/AshutoshRajGupta/EduVista/assets/89141709/108bafad-e325-467c-a7c8-9e199ff08f9e)
+
+
+
+
+
 ## Getting Started
 
 To get started with EduVista, simply visit [EduVista Website](https://edu-vista.vercel.app/) and explore the rich educational content and services available.
